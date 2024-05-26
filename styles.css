@@ -1,7 +1,9 @@
-/* Stylesheet for the website */
+/* 样式表，用于定义网页的外观 */
 
 body {
-    font-family: 'Times New Roman', Times, serif, sans-serif;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px; /* 增加字体大小 */
+    line-height: 2;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
@@ -16,7 +18,7 @@ header {
 
 main {
     padding: 2em;
-    text-align: center;
+    text-align: left; /* 左对齐文本 */
 }
 
 footer {
@@ -31,21 +33,37 @@ footer {
 
 h1 {
     font-size: 2em;
+    margin: 0;
+    padding: 0.5em 0;
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 20px; /* 增加字体大小 */
+    font-family: "Times New Roman", Times, serif;
+    line-height: 2;
+    text-indent: 2em; /* 段落开头缩进 */
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    justify-items: center;
+    margin-top: 2em;
 }
 
 button {
-    padding: 0.5em 1em;
-    font-size: 1em;
+    padding: 1em 2em; /* 增加按钮的大小 */
+    font-size: 1.2em; /* 增加按钮字体大小 */
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 1em;
+    width: 100%;
+    max-width: 200px; /* 增加按钮最大宽度 */
 }
 
 button:hover {
