@@ -67,11 +67,10 @@ button {
     max-width: 200px; /* 增加按钮最大宽度 */
     overflow: hidden; /* 确保波浪效果不溢出按钮边界 */
     position: relative; /* 使波浪效果相对于按钮定位 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* 添加过渡效果 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
 }
 
 button:hover {
-    background-color: #0056b3;
     transform: translateY(-5px); /* 悬浮效果 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
 }
