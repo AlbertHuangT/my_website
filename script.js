@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             if (href) {
                 setTimeout(() => {
                     window.location.href = href;
-                }, 300); // 延迟跳转，以便波浪效果显示完整
+                }, 150); // 延迟跳转，以便波浪效果显示完整
             }
         });
 
