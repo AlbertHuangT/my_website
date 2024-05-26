@@ -65,6 +65,8 @@ button {
     cursor: pointer;
     width: 100%;
     max-width: 200px; /* 增加按钮最大宽度 */
+    overflow: hidden; /* 确保波浪效果不溢出按钮边界 */
+    position: relative; /* 使波浪效果相对于按钮定位 */
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* 添加过渡效果 */
 }
 
@@ -72,6 +74,21 @@ button:hover {
     background-color: #0056b3;
     transform: translateY(-5px); /* 悬浮效果 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+}
+
+button .ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
 }
 
 /* 响应式设计 */
