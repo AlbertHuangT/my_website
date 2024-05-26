@@ -7,6 +7,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -17,6 +20,7 @@ header {
 }
 
 main {
+    flex: 1; /* 使 main 区域扩展以填满剩余空间 */
     padding: 2em;
     text-align: left; /* 左对齐文本 */
 }
@@ -26,9 +30,6 @@ footer {
     color: white;
     text-align: center;
     padding: 1em;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 h1 {
