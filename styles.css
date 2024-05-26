@@ -70,3 +70,29 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .button-container {
+        grid-template-columns: repeat(2, 1fr); /* 在平板设备上，每行显示两个按钮 */
+    }
+}
+
+@media (max-width: 480px) {
+    .button-container {
+        grid-template-columns: 1fr; /* 在手机设备上，每行显示一个按钮 */
+    }
+
+    button {
+        font-size: 1em; /* 调整按钮字体大小 */
+        max-width: 100%; /* 按钮占满全宽 */
+    }
+
+    main {
+        padding: 1em; /* 减少主内容的内边距 */
+    }
+
+    p {
+        font-size: 18px; /* 调整文字大小 */
+    }
+}
