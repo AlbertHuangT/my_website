@@ -82,6 +82,9 @@ button .ripple {
     transform: scale(0);
     animation: ripple 0.6s linear;
     background: rgba(255, 255, 255, 0.7);
+    width: 100px; /* 初始宽度 */
+    height: 100px; /* 初始高度 */
+    pointer-events: none; /* 确保波浪不拦截点击事件 */
 }
 
 @keyframes ripple {
