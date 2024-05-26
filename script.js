@@ -22,11 +22,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             e.preventDefault(); // 阻止默认的按钮点击行为
             createRipple(e);
 
-            // 延迟页面跳转
+            // 立即跳转页面
             const href = this.getAttribute('data-href');
-            setTimeout(() => {
-                window.location.href = href;
-            }, 300); // 300ms 的延迟
+            window.location.href = href;
         });
 
         button.addEventListener('touchstart', function (e) {
