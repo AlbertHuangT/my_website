@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const ripple = document.createElement('span');
         ripple.classList.add('ripple');
         const rect = button.getBoundingClientRect();
-        const clientX = event.clientX || event.touches[0].clientX;
-        const clientY = event.clientY || event.touches[0].clientY;
+        const clientX = event.clientX || (event.touches && event.touches[0].clientX);
+        const clientY = event.clientY || (event.touches && event.touches[0].clientY);
         ripple.style.left = `${clientX - rect.left}px`;
         ripple.style.top = `${clientY - rect.top}px`;
         button.appendChild(ripple);
@@ -24,7 +24,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
             // 立即跳转页面
             const href = this.getAttribute('data-href');
-            window.location.href = href;
+            if (href) {
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 300); // 延迟跳转，以便波浪效果显示完整
+            }
         });
 
         button.addEventListener('touchstart', function (e) {
